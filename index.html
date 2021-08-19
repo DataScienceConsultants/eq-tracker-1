@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <title>7 day Earthquake Tracker</title>
+
+<style>
+  .header {
+  padding: 60px;
+  text-align: center;
+  background: #3c3c3c;
+  color: white;
+  font-size: 30px;
+    Set-Cookie: key=value; SameSite=Strict, Secure
+}
+  
+  </style>
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+
+  <!-- Our CSS -->
+  <link rel="stylesheet" type="text/css" href="static/css/style.css">
+ 
+</head>
+<body>
+
+    <div class="header">
+  <h1>7-Day Earthquake Tracker, Real time data.</h1>
+  <p>Data Science Consultants, LLC 
+    <b><br>
+      573.355.0173</br>
+    <br>data.science.llc@gmail.com</br></p>
+<a href="https://www.patreon.com/bePatron?u=30606076" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
+</div>
+<div class="dropup">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Menu
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu" >
+    <li><a href="last_hour.html">Last Hour</a></li>
+    <li><a href="lastday.html">Last 24 hours</a></li>
+    <li><a href="lastmonth.html">Last Month Significant Quakes</a></li>
+  </ul>
+</div>
+  <!-- The div that holds our map -->
+  <div id="map"></div>
+
+  <!-- Leaflet JavaScript -->
+
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
+  <!-- D3 JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.3/d3.min.js"></script>
+  <!-- Our JavaScript -->
+  <script type="text/javascript" src="static/js/logic.js"></script>
+
+
+</body>
+</html>
+
