@@ -9,7 +9,7 @@ var lightmap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/light-v9/til
   maxZoom: 75,
   id: "mapbox.light",
   accessToken: API_KEY
-}).addTo(map);
+});
 
 // geolocation
 map.locate({setView: true, maxZoom: 16});
