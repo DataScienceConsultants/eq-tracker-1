@@ -9,7 +9,30 @@ var lightmap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/light-v9/til
   maxZoom: 75,
   id: "mapbox.light",
   accessToken: API_KEY
-});
+}).addTo(map);
+
+// geolocation
+map.locate({setView: true, maxZoom: 16});
+
+function onLocationFound(e) {
+  var radius = e.accuracy;
+
+  L.marker(e.latlng).addTo(map)
+    .bindPopup("You are within " + radius + " meters from this point").openPopup();
+
+  L.circle(e.latlng, radius).addTo(map);
+}
+
+map.on('locationfound', onLocationFound);
+
+function onLocationError(e) {
+  alert(e.message);
+}
+
+map.on('locationerror', onLocationError);
+
+// end of geolocation
+
 
 // JSON Data from USGS
 
